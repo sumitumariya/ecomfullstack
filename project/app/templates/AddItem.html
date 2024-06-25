@@ -1,0 +1,61 @@
+{% extends "Base.html" %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form{
+            /* margin: 40px; */
+            border: 2px solid blueviolet;
+            width: 40%;
+            height: 430px;
+            border-radius: 50px;
+            background: #E3E6F3;
+        }
+        .form input{
+           height: 45px;
+          margin-top: -30px;
+            width: 80%;text-align: center;
+        }
+        .form button{height: 45px;
+            
+            width: 80%;text-align: center;}
+             .h1{margin-top: 50px;}
+    </style>
+</head>
+<body>
+    <center>
+      <h1 class="h1">Time to Add New Products</h1>
+    <form class="form" action="{% url 'Productdata' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <br> <br> <br> <br>
+        <div class="mb-3">
+          
+          <input type="text" class="form-control" name="name" aria-describedby="emailHelp" placeholder="Name Of Product">
+        </div> <br> <br>
+        <div class="mb-3">
+          
+          <input type="tel" class="form-control" name="price" aria-describedby="emailHelp" placeholder="Price Of Product">
+        </div> <br> <br>
+        <div class="mb-3">
+          
+          <input type="file" class="form-control" name="img" aria-describedby="emailHelp" placeholder="Product Image">
+        </div> <br> <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </center>
+</body>
+</html>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+{% endblock %}

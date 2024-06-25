@@ -1,0 +1,53 @@
+
+
+
+.contact{width: 80%;
+margin: 50px auto;}
+.contact h1{
+margin-bottom: 25px;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+.contact p{color: #C1E0D1;}
+
+.contact-box{border: 3px solid #222222;margin: 100px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background-color:black;display: flex;}
+
+.contact-box-left{padding: 40px 60px;
+background-color:white;flex-basis: 60%;
+}
+.contact-box-left h3,.contact-box-right h3{color: #222222;
+font-weight: 700px;
+}
+
+.contact-box-right{padding: 40px ;background-color: #222222; color: wheat;
+flex-basis: 40%;}
+.contact-box-right i{margin-left: 70px;
+font-size: 40px;}
+
+
+.input-row{
+display: flex;justify-content: space-between;
+margin-bottom: 20px;
+}
+input{width: 100%;
+border: none; border-bottom: 1px solid #222222;
+outline: none;padding-bottom: 5px;}
+.msg{height: 100px;}
+label{color: #222222;}
+.s4{ width: 80px;margin-top: 10px;}
+.s4:hover{border: 2px solid plum;}
+
+@media screen and (max-width:750px){
+    .contact-box {
+        border: 3px solid #222222;
+        margin: 100px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: black;
+        display: flex;flex-direction: column;
+    }
+    .contact-box-left {
+        padding: 0;
+        background-color: white;
+        flex-basis: 30%;
+        
+    }
+}

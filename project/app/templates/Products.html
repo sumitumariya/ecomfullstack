@@ -1,0 +1,59 @@
+{% extends "Base.html" %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+  <section id="product1" class="section-p1">
+    <center>
+      <h2>Featured Products</h2>
+    <p>Summer Collection New Modern Design</p>
+    </center>
+
+  <div class="pro-container">
+    {% if item %}
+    {% for i in item %}
+    <div class="pro">
+        <img src="{{media_url}}{{i.Image}}" alt="{{ i.Name }}">
+
+          <div class="des">
+              <span>{{ i.Name }}</span>
+          <h5>Cartoon Astronaut T-shirts</h5>
+          <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+          </div>
+          <h4 >RS{{ i.Price }}</h4>
+      </div>
+      <form action="{% url 'AddToCart' pk=i.id %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <button>
+
+          <a ><i class="fa-solid fa-cart-shopping cart"></i></a>
+        </button>
+    </form>
+    </div>
+  {% endfor %}
+{% endif %}
+      </div>
+  </section>
+ 
+</body>
+</html>
+<br>
+
+<br>
+
+<br>
+{% endblock %}

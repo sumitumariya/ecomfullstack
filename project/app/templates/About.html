@@ -1,0 +1,69 @@
+{% extends "Base.html" %}
+{% load static %}
+
+{% block content %}
+
+<section id="page-header" class="about-header">
+
+    <h2>#KnowUs</h2>
+
+    <p>Stay connected with us!thankyou </p>
+
+</section>
+<section id="about-head"class="section-p1" >
+    <img src="{% static 'img/about/a6.jpg' %}" alt="" clip-path: polygon(75% 0%, 100% 51%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);>
+    
+    <div>
+        <h2>Who We Are?</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ea ipsam explicabo quisquam dolorum
+            repudiandae aspernatur! Nam facere molestiae nobis id molestias eaque impedit facilis omnis modi eos
+            placeat debitis qui quae sit voluptas at minima ad, necessitatibus est totam. Quidem tempora, atque quo
+            obcaecati tempore exercitationem corporis repellat dicta porro aliquid esse id quis optio placeat,
+            commodi eveniet possimus, ullam mollitia sint minus delectus. Architecto unde tempora temporibus facilis
+            voluptatem enim deserunt amet quibusdam perferendis deleniti, possimus quas pariatur officiis odio a,
+            excepturi provident hic nisi!</p>
+            
+                 <br>
+
+                 <marquee bgcolor="#ccc" loop="-1" style="font-size: xx-large;">Create stunning images with as much or as little control as you like
+                    ,thanks to a choice basic and creative modes</marquee>
+    </div>
+
+</section>
+
+<section id="feature" class="section-p1">
+    <div class="fe-box">
+        <img src="{% static 'img/features/f1.png' %}" alt="">
+        <h6>Free Shipping </h6>
+    </div>
+    <div class="fe-box">
+        <img src="{% static 'img/features/f2.png' %}" alt="">
+        <h6>Onlinr Order </h6>
+    </div>
+    <div class="fe-box">
+        <img src="{% static 'img/features/f3.png' %}" alt="">
+        <h6>Save Money </h6>
+    </div>
+    <div class="fe-box">
+        <img src="{% static 'img/features/f4.png' %}" alt="">
+        <h6>Promotions </h6>
+    </div>
+    <div class="fe-box">
+        <img src="{% static 'img/features/f5.png' %}" alt="">
+        <h6>Happy Sell </h6>
+    </div>
+    <div class="fe-box">
+        <img src="{% static 'img/features/f6.png' %}" alt="">
+        <h6>24/7 Support </h6>
+    </div>
+</section> <section id="newsletter"class="section-p1 section-m1">
+    <div class="newtext">
+        <h4>Sign up For Newsletters</h4>
+        <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+    </div>
+    <div class="form">
+        <input type="text" placeholder="your email address">
+        <button class="normal">Sign Up</button>
+    </div>
+</section>
+{% endblock %}

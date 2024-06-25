@@ -1,0 +1,70 @@
+
+<!-- ........................................................................................................... -->
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="{% static 'css/contact.css/' %}">
+    </head>
+    <body>
+        <div class="contact">
+            <center><h2>Connect with us </h2>
+                <h2> I would love to respond to your queries .</h2></center>
+            </div>
+            <div class="contact-box"> 
+                <div class="contact-box-left">
+                    <h3>Sent your request</h3>
+                    <form action="{% url 'Contact' %}" method="post">
+                        {% csrf_token %}
+                        
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label>Name</label >
+                                    <input type="text" placeholder="Name" name="name" /> 
+                                </div>
+                                <div class="input-group">
+                                    <label>Phone</label >
+                                        <input type="text" placeholder="+91 1234567890" required>
+                </div>
+            </div>
+            
+            <div class="input-row">
+                <div class="input-group">
+                    <label>Email</label >
+                        <input type="email" placeholder="Email"  name="email" /> 
+                    </div>
+                    <div class="input-group">
+                        <label>Subject</label >
+                            <input type="text" placeholder=" your subject" required>
+                        </div>
+                    </div>
+                    <label>Message</label >
+                        <input type="text" name="msg" style="height: 80px " />  <br /> <br>
+                        
+                        <button class="s4">send mail</button>
+                    </form>
+                </div>
+                <div class="contact-box-right">
+                    <h3 style="color: wheat;">Reach us</h3>
+                    <P style="color: wheat;"> Email :- Project@ gmail.com</P><br>
+                    <br>
+                    <p style="color: wheat;"> Phone :- 91 1234567890</p><br>
+                    <br>
+                    <p style="color: wheat;">Address :- rv09,ground floor,some road ,mp nagar bhopal 421520 </p><br>
+                    <br>
+                    <i class="fa-brands fa-twitter "></i><i class="fa-brands fa-instagram "></i><i class="fa-brands fa-facebook "></i>
+                    
+                    
+                    
+                    
+                </div>
+            </div>
+        </body>
+        </html>
+        {% endblock %}
